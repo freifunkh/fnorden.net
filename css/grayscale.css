@@ -82,6 +82,7 @@ a:focus {
 
 .navbar-custom .navbar-brand {
     font-weight: 700;
+    text-transform: none;
 }
 
 .navbar-custom .navbar-brand:focus {
