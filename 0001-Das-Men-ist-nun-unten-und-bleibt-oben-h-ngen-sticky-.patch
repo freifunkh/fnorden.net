@@ -1,0 +1,147 @@
+From 346cd6fd84502bed59db8cccd9e7e4a5bc544a5b Mon Sep 17 00:00:00 2001
+From: Bastian Arnhardt <bastian@arnhardt.de>
+Date: Wed, 28 Dec 2016 17:34:27 +0100
+Subject: [PATCH] =?UTF-8?q?Das=20Men=C3=BC=20ist=20nun=20unten=20und=20ble?=
+ =?UTF-8?q?ibt=20oben=20h=C3=A4ngen=20(sticky=20menu).=20Es=20ist=20Anfang?=
+ =?UTF-8?q?s=20schwarz=20und=20wird=20transparent=20sobald=20es=20sticky?=
+ =?UTF-8?q?=20wird.=20Der=20Fehler=20mit=20dem=20Padding=20im=20sticky=20m?=
+ =?UTF-8?q?ode=20ist=20behoben.?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+---
+ css/grayscale.css | 17 +++++++++++++++--
+ index.html        | 34 ++++++++++++++++++----------------
+ js/grayscale.js   |  9 ++++++---
+ 3 files changed, 39 insertions(+), 21 deletions(-)
+
+diff --git a/css/grayscale.css b/css/grayscale.css
+index 11f7aa7..ad3d009 100644
+--- a/css/grayscale.css
++++ b/css/grayscale.css
+@@ -74,10 +74,13 @@ a:focus {
+ 
+ .navbar-custom {
+     margin-bottom: 0;
++    margin-top: 0;
+     border-bottom: 1px solid rgba(255,255,255,.3);
+     text-transform: uppercase;
+     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+-    background-color: rgba(0, 0, 0, 0.61);
++    background-color: rgba(0, 0, 0,1);
++    border-radius: 0px;
++    border: 0px;
+ }
+ 
+ .navbar-custom .navbar-brand {
+@@ -149,6 +152,7 @@ a:focus {
+         border-bottom: 1px solid rgba(255,255,255,.3);
+         background: #000;
+     }
++
+ }
+ 
+ .navbar-brand img {
+@@ -158,6 +162,15 @@ a:focus {
+     margin-right: 10px;
+ }
+ 
++.navbar-header .fa-bars {
++    color: #fff;
++}
++
++
++/* menu do not jump */
++.navbar-fixed-top .navbar-collapse {
++    padding: 0 15px;
++}
+ 
+ .intro {
+     display: table;
+@@ -189,7 +202,7 @@ a:focus {
+ 
+ @media(min-width:768px) {
+     .intro {
+-        height: 100%;
++        height: 86%;
+         padding: 0;
+     }
+ 
+diff --git a/index.html b/index.html
+index aa0d5e6..9031af4 100644
+--- a/index.html
++++ b/index.html
+@@ -36,8 +36,25 @@
+ 
+ <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+ 
++
++    <!-- Intro Header -->
++    <header class="intro">
++        <div class="intro-body">
++            <div class="container">
++                <div class="row">
++                    <div class="col-md-6 col-md-offset-4">
++                        <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
++                        <a href="#about" class="btn btn-circle page-scroll">
++                            <i class="fa fa-angle-double-down animated"></i>
++                        </a>
++                    </div>
++                </div>
++            </div>
++        </div>
++    </header>
++
+     <!-- Navigation -->
+-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
++    <nav class="navbar navbar-custom" role="navigation">
+         <div class="container">
+             <div class="navbar-header">
+                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+@@ -78,21 +95,6 @@
+         <!-- /.container -->
+     </nav>
+ 
+-    <!-- Intro Header -->
+-    <header class="intro">
+-        <div class="intro-body">
+-            <div class="container">
+-                <div class="row">
+-                    <div class="col-md-6 col-md-offset-4">
+-                        <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
+-                        <a href="#about" class="btn btn-circle page-scroll">
+-                            <i class="fa fa-angle-double-down animated"></i>
+-                        </a>
+-                    </div>
+-                </div>
+-            </div>
+-        </div>
+-    </header>
+ 
+     <!-- About Section -->
+     <section id="about" class="container content-section text-center">
+diff --git a/js/grayscale.js b/js/grayscale.js
+index 20faf86..d02bb0f 100644
+--- a/js/grayscale.js
++++ b/js/grayscale.js
+@@ -6,10 +6,13 @@
+ 
+ // jQuery to collapse the navbar on scroll
+ $(window).scroll(function() {
+-    if ($(".navbar").offset().top > 50) {
+-        $(".navbar-fixed-top").addClass("top-nav-collapse");
++    if ($(window).scrollTop() > $('header').outerHeight()) {
++        $(".navbar-custom").addClass("navbar-fixed-top");
++        $(".navbar-custom").css("background-color","rgba(0,0,0,0.61)");
++
+     } else {
+-        $(".navbar-fixed-top").removeClass("top-nav-collapse");
++        $(".navbar-custom").removeClass("navbar-fixed-top");
++        $(".navbar-custom").css("background-color","rgba(0,0,0,1)");
+     }
+ });
+ 
+-- 
+2.11.0
+

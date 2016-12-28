@@ -1,0 +1,76 @@
+From 89f452c96bbb0ee2fbb37da5b41bfc4e999446d8 Mon Sep 17 00:00:00 2001
+From: Bastian Arnhardt <bastian@arnhardt.de>
+Date: Wed, 28 Dec 2016 01:00:12 +0100
+Subject: [PATCH] neuen Intro Banner neue Anordnung des Intro Textes Fnorden
+ Logo in die Navbar kleinere CSS Verbesserungen
+
+---
+ css/grayscale.css | 10 +++++++++-
+ index.html        |  9 ++++++---
+ 2 files changed, 15 insertions(+), 4 deletions(-)
+
+diff --git a/css/grayscale.css b/css/grayscale.css
+index 274880a..11f7aa7 100644
+--- a/css/grayscale.css
++++ b/css/grayscale.css
+@@ -151,6 +151,14 @@ a:focus {
+     }
+ }
+ 
++.navbar-brand img {
++    height: 39px;
++    float: left;
++    margin-top: -9px;
++    margin-right: 10px;
++}
++
++
+ .intro {
+     display: table;
+     width: 100%;
+@@ -158,7 +166,7 @@ a:focus {
+     padding: 100px 0;
+     text-align: center;
+     color: #fff;
+-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
++    background: url(../img/fnordsee_02_intro.png) no-repeat bottom center scroll;
+     background-color: #000;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+diff --git a/index.html b/index.html
+index da602e8..aa0d5e6 100644
+--- a/index.html
++++ b/index.html
+@@ -44,7 +44,7 @@
+                     <i class="fa fa-bars"></i>
+                 </button>
+                 <a class="navbar-brand page-scroll" href="#page-top">
+-                    <i class="fa fa-play-circle"></i>  <span class="light">F</span>Norden e.V.
++                    <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
+                 </a>
+             </div>
+ 
+@@ -67,6 +67,10 @@
+                     <li>
+                         <a class="page-scroll" href="#donations">Spenden</a>
+                     </li>
++                    <li>
++                        <a class="page-scroll"
++                        href="http://hannover.freifunk.net/wiki/Unterstützer">Unterstützer</a>
++                    </li>
+                 </ul>
+             </div>
+             <!-- /.navbar-collapse -->
+@@ -79,8 +83,7 @@
+         <div class="intro-body">
+             <div class="container">
+                 <div class="row">
+-                    <div class="col-md-8 col-md-offset-2">
+-                        <img src="/img/logo_fnorden.svg" alt="Fnorden Logo" />
++                    <div class="col-md-6 col-md-offset-4">
+                         <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
+                         <a href="#about" class="btn btn-circle page-scroll">
+                             <i class="fa fa-angle-double-down animated"></i>
+-- 
+2.11.0
+
