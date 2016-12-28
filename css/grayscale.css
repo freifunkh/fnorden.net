@@ -139,7 +139,8 @@ a:focus {
 
 @media(min-width:768px) {
     .navbar-custom {
-        padding: 20px 0;
+        height: 15%;
+        padding: 40px 0;
         border-bottom: 0;
         letter-spacing: 1px;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
@@ -172,6 +173,11 @@ a:focus {
     padding: 0 15px;
 }
 
+.navbar-fixed-top {
+    padding: 0 0 0 0;
+    height: auto;
+}
+
 .intro {
     display: table;
     width: 100%;
@@ -185,6 +191,10 @@ a:focus {
     -moz-background-size: cover;
     background-size: cover;
     -o-background-size: cover;
+}
+
+.intro img {
+    margin: 0 0 1em 0;
 }
 
 .intro .intro-body {
