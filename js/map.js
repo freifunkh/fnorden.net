@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var map = L.map('map').setView([52.371433328429255, 9.71984267234802], 16);
+    var map = L.map('map').setView([52.401247, 9.702307], 16);
 
     map.scrollWheelZoom.disable();
 
@@ -7,7 +7,7 @@ $(document).ready(function() {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([52.371433328429255, 9.71984267234802]).addTo(map)
-        .bindPopup('Computerwerkstatt Glocksee Bauhaus e.V. , Glockseestraße 35')
+    L.marker([52.401247, 9.702307]).addTo(map)
+        .bindPopup('Paul-Dohrmann-Schule, Burgweg 5, 30419 Hannover')
         .openPopup();
 });
