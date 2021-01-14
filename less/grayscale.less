@@ -71,13 +71,19 @@ a {
 }
 
 .navbar-custom {
+    align-items: center;
     margin-bottom: 0;
+    margin-top: 0;
+    border-radius: 0px;
+    border: 0px;
     border-bottom: 1px solid fade(white, 30%);
+    display: flex;
     text-transform: uppercase;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: black;
     .navbar-brand {
         font-weight: 700;
+        text-transform: none;
         &:focus {
             outline: none;
         }
@@ -123,10 +129,9 @@ a {
         }
     }
     @media(min-width:768px) {
-        padding: 20px 0;
+        height: 15%;
         border-bottom: none;
         letter-spacing: 1px;
-        background: transparent;
         -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
         transition: background .5s ease-in-out,padding .5s ease-in-out;
