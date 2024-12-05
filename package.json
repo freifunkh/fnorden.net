@@ -8,6 +8,8 @@
     "build:bootstrap:css": "cp node_modules/bootstrap/dist/css/bootstrap.min.css css/",
     "build:bootstrap:fonts": "cp node_modules/bootstrap/dist/fonts/* fonts/",
     "build:bootstrap:js": "cp node_modules/bootstrap/dist/js/bootstrap.min.js js/",
+    "build:leaflet:css": "cp node_modules/leaflet/dist/leaflet.css css/",
+    "build:leaflet:js": "cp node_modules/leaflet/dist/leaflet.js js/",
     "css:less": "lessc less/grayscale.less css/grayscale.css"
   },
   "repository": {
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/freifunkh/fnorden.net#readme",
   "devDependencies": {
     "bootstrap": "^3.3.6",
+    "leaflet": "^0.7.7",
     "less": "^4.2.1"
   }
 }
