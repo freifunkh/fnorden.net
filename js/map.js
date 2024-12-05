@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var map = L.map('map').setView([52.401247, 9.702307], 16);
+    var map = L.map('map').setView([52.393140880, 9.722862840], 16);
 
     map.scrollWheelZoom.disable();
 
@@ -7,7 +7,7 @@ $(document).ready(function() {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(map);
 
-    L.marker([52.401247, 9.702307]).addTo(map)
-        .bindPopup('Paul-Dohrmann-Schule, Burgweg 5, 30419 Hannover')
+    L.marker([52.393140880, 9.722862840]).addTo(map)
+        .bindPopup('Hüttenstraße 22b, 30165 Hannover')
         .openPopup();
 });
