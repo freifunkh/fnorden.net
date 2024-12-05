@@ -4,7 +4,8 @@
   "description": "Der Vorschlag für fnorden.net, für den Fall, dass auch anderen 15 HTML Tags zu primitiv sind",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:less": "lessc less/grayscale.less css/grayscale.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/freifunkh/fnorden.net/issues"
   },
-  "homepage": "https://github.com/freifunkh/fnorden.net#readme"
+  "homepage": "https://github.com/freifunkh/fnorden.net#readme",
+  "devDependencies": {
+    "less": "^4.2.1"
+  }
 }
