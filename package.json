@@ -9,8 +9,7 @@
     "build:bootstrap:fonts": "cp node_modules/bootstrap/dist/fonts/* fonts/",
     "build:bootstrap:js": "cp node_modules/bootstrap/dist/js/bootstrap.min.js js/",
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js js/jquery.js",
-    "build:leaflet:css": "cp node_modules/leaflet/dist/leaflet.css css/",
-    "build:leaflet:js": "cp node_modules/leaflet/dist/leaflet.js js/",
+    "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
     "css:less": "lessc less/grayscale.less css/grayscale.css"
   },
   "repository": {
