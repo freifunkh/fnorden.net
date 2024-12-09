@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/freifunkh/fnorden.net#readme",
   "devDependencies": {
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^3.4.1",
     "jquery": "^3.7.1",
     "leaflet": "^0.7.7",
     "less": "^4.2.1"
