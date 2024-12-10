@@ -8,6 +8,7 @@
     "build:bootstrap:css": "cp node_modules/bootstrap/dist/css/bootstrap.min.css css/",
     "build:bootstrap:fonts": "cp node_modules/bootstrap/dist/fonts/* fonts/",
     "build:bootstrap:js": "cp node_modules/bootstrap/dist/js/bootstrap.min.js js/",
+    "build:font-awesome": "rm -rf vendor/font-awesome; mkdir vendor/font-awesome; cp -r node_modules/font-awesome/css/ vendor/font-awesome/css/; cp -r node_modules/font-awesome/fonts/ vendor/font-awesome/fonts/;",
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js js/jquery.js",
     "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
     "css:less": "lessc less/grayscale.less css/grayscale.css"
@@ -24,6 +25,7 @@
   "homepage": "https://github.com/freifunkh/fnorden.net#readme",
   "devDependencies": {
     "bootstrap": "^3.4.1",
+    "font-awesome": "^4.2.0",
     "jquery": "^3.7.1",
     "leaflet": "^0.7.7",
     "less": "^4.2.1"
