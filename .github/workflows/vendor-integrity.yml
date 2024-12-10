@@ -29,11 +29,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run build:bootstrap:css
-      run: npm run build:bootstrap:css
-
-    - name: Run build:bootstrap:fonts
-      run: npm run build:bootstrap:js
+    - name: Run build:bootstrap
+      run: npm run build:bootstrap
 
     - name: Run build:font-awesome
       run: npm run build:font-awesome
