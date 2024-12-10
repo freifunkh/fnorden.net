@@ -1,0 +1,49 @@
+name: Verify vendored integrity
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  build_and_verify:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set git config to ignore line endings
+      run: |
+        git config --global core.autocrlf input
+        git config --global core.safecrlf false
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '23'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run build:bootstrap:css
+      run: npm run build:bootstrap:css
+
+    - name: Run build:bootstrap:fonts
+      run: npm run build:bootstrap:js
+
+    - name: Run build:font-awesome
+      run: npm run build:font-awesome
+
+    - name: Run build:jquery
+      run: npm run build:jquery
+
+    - name: Run build:leaflet
+      run: npm run build:leaflet
+
+    - name: Check git diff
+      run: |
+        git diff --exit-code
