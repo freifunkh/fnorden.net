@@ -37,7 +37,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".fixed-top">
 
 
     <!-- Intro Header -->
@@ -45,7 +45,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 col-md-offset-5 col-sm-offset-0 col-sm-12">
+                    <div class="col-lg-7 offset-md-5 offset-sm-0 col-md-12">
                         <img src="img/logo_intro.png">
                         <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
@@ -58,42 +58,40 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom" role="navigation">
+    <nav class="navbar navbar-custom navbar-expand-md" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
-                </a>
-            </div>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
+            </a>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse navbar-main-collapse">
+                <ul class="nav navbar-nav ml-auto">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li class="hidden nav-item">
+                        <a href="#page-top" class="nav-link"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#about">Über</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="#about">Über</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Kontakt</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="#contact">Kontakt</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#impressum">Impressum</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="#impressum">Impressum</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#donations">Spenden</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="#donations">Spenden</a>
                     </li>
-                    <li>
-                        <a class="page-scroll"
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link"
                         href="https://hannover.freifunk.net/wiki/Freifunk/Unterstuetzer">Unterstützer</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="satzung.html">Satzung</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="satzung.html">Satzung</a>
                     </li>
                 </ul>
             </div>
@@ -106,7 +104,7 @@
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
                 <h2>Über <span class="light">F</span>Norden e.V.</h2>
                 <p>Freier Zugang zu Kommunikation, Information und Bildung</p>
                 <p>ist wichtiger Bestandteil unserer demokratischen Gesellschaft.</p>
@@ -119,45 +117,45 @@
     <!-- Contact Section -->
     <section id="contact" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
 		<h2>Kontakt <span class="light">F</span>Norden e.V.</h2>
                 <ul class="list-inline vorstand">
-                    <li style="vertical-align: top;">
+                    <li style="vertical-align: top;" class="list-inline-item">
                         <p>
 			Carsten Wiemann<br>
 		        </p>
 		    </li>
-		    <li style="vertical-align: top;"><p>|</p></li>
-                    <li style="vertical-align: top;">
+		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
+                    <li style="vertical-align: top;" class="list-inline-item">
                         <p>
                             Bernd Schittenhelm
 		        </p>
 		    </li>
-		    <li style="vertical-align: top;"><p>|</p></li>
-                    <li style="vertical-align: top;">
+		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
+                    <li style="vertical-align: top;" class="list-inline-item">
                         <p>
                             Manuel Kock
 		        </p>
 		    </li>
-		    <li style="vertical-align: top;"><p>|</p></li>
-                    <li style="vertical-align: top;">
+		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
+                    <li style="vertical-align: top;" class="list-inline-item">
                         <p>
                             Jan-Niklas Burfeind
 		        </p>
 		    </li>
                 </ul>
                 <ul class="list-inline banner-social-buttons">
-                    <li>
-                        <a href="mailto:vorstand@fnorden.de" class="btn btn-default btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Mail</span></a>
+                    <li class="list-inline-item">
+                        <a href="mailto:vorstand@fnorden.de" class="btn btn-secondary btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Mail</span></a>
                     </li>
-                    <li>
-                        <a href="https://friendica.me/profile/freifunkh" class="btn btn-default btn-lg"><i class="fa fa-globe fa-fw"></i> <span class="network-name">Friendica</span></a>
+                    <li class="list-inline-item">
+                        <a href="https://friendica.me/profile/freifunkh" class="btn btn-secondary btn-lg"><i class="fa fa-globe fa-fw"></i> <span class="network-name">Friendica</span></a>
                     </li>
-                    <li>
-                        <a href="https://github.com/freifunkh" class="btn btn-default btn-lg"><i class="fa-brands fa-github fa-fw"></i> <span class="network-name">Github</span></a>
+                    <li class="list-inline-item">
+                        <a href="https://github.com/freifunkh" class="btn btn-secondary btn-lg"><i class="fa-brands fa-github fa-fw"></i> <span class="network-name">Github</span></a>
                     </li>
-                    <li>
-                        <a href="https://www.facebook.com/pages/FNorden-eV/1605175656419883" class="btn btn-default btn-lg"><i class="fa-brands fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    <li class="list-inline-item">
+                        <a href="https://www.facebook.com/pages/FNorden-eV/1605175656419883" class="btn btn-secondary btn-lg"><i class="fa-brands fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
                     </li>
                 </ul>
             </div>
@@ -170,7 +168,7 @@
     <!-- About Section -->
     <section id="impressum" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
                 <h1>Impressum</h1>
                 <h2>Angaben gemäß § 5 TMG:</h2>
                 <p>
@@ -190,7 +188,7 @@
     <!-- donation section -->
     <section id="donations" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
                 <h1>Spenden</h1>
                 <p>... nehmen wir als gemeinnütziger Verein natürlich dankend entgegen und
 		arbeiten stetig daran, unser Netz mit Eurer Unterstützung noch besser zu machen.</p>
@@ -219,7 +217,7 @@
     </section>
     <section id="about" class="container content-section text-center">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
                 <h1>Haftungsausschluss (Disclaimer)</h1>
 <h2>Haftung für Inhalte</h2>
 <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
