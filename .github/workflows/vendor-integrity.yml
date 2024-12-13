@@ -38,6 +38,9 @@ jobs:
     - name: Run build:jquery
       run: npm run build:jquery
 
+    - name: Run build:jquery.easing
+      run: npm run build:jquery.easing
+
     - name: Run build:leaflet
       run: npm run build:leaflet
 
