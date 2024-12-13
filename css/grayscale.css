@@ -107,13 +107,13 @@ a:focus {
   outline: none;
   background-color: transparent;
 }
-.navbar-custom .nav li.active {
+.navbar-custom .nav li:has(a.active) {
   outline: none;
 }
-.navbar-custom .nav li.active a {
+.navbar-custom .nav li a.active {
   background-color: rgba(255, 255, 255, 0.3);
 }
-.navbar-custom .nav li.active a:hover {
+.navbar-custom .nav li a.active:hover {
   color: white;
 }
 @media (min-width: 768px) {
@@ -140,11 +140,11 @@ a:focus {
 .navbar-header .fa-bars {
   color: #fff;
 }
-.navbar-fixed-top {
+.fixed-top {
   padding: 0 0 0 0;
   height: auto;
 }
-.navbar-fixed-top .navbar-collapse {
+.fixed-top .navbar-collapse {
   /* menu do not jump */
   padding: 0 15px;
 }
@@ -291,13 +291,13 @@ a:focus {
   transition: all 0.3s ease-in-out;
   border-radius: 0;
 }
-.btn-default {
+.btn-secondary {
   border: 1px solid #42DCA3;
   color: #42DCA3;
   background-color: transparent;
 }
-.btn-default:hover,
-.btn-default:focus {
+.btn-secondary:hover,
+.btn-secondary:focus {
   border: 1px solid #42DCA3;
   outline: none;
   color: black;

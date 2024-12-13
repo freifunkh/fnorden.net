@@ -34,7 +34,7 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body id="page-top" data-spy="scroll" data-target=".fixed-top">
 
 
     <!-- Intro Header -->
@@ -42,7 +42,7 @@
         <div class="intro-body">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-7 col-md-offset-5 col-sm-offset-0 col-sm-12">
+                    <div class="col-lg-7 offset-md-5 offset-sm-0 col-md-12">
                         <img src="img/logo_intro.png">
                         <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
                         <a href="#constitution" class="btn btn-circle page-scroll">
@@ -55,29 +55,27 @@
     </header>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom" role="navigation">
+    <nav class="navbar navbar-custom navbar-expand-md" role="navigation">
         <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
-                </a>
-            </div>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <i class="fa fa-bars"></i>
+            </button>
+            <a class="navbar-brand page-scroll" href="#page-top">
+                <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
+            </a>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div class="collapse navbar-collapse navbar-main-collapse">
+                <ul class="nav navbar-nav ml-auto">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
+                    <li class="hidden nav-item">
+                        <a href="#page-top" class="nav-link"></a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="/">zurück zur Übersicht</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="/">zurück zur Übersicht</a>
                     </li>
-                    <li>
-                        <a class="page-scroll" href="#constitution">Satzung</a>
+                    <li class="nav-item">
+                        <a class="page-scroll nav-link" href="#constitution">Satzung</a>
                     </li>
                 </ul>
             </div>
@@ -90,7 +88,7 @@
     <!-- Constitution Section -->
     <section id="constitution" class="container content-section">
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
+            <div class="col-xl-8 offset-lg-2">
                 <h2>Satzung <span class="light">F</span>Norden e.V.</h2>
                 <h3>§1 Name, Sitz, Geschäftsjahr</h3>
                 <p>
