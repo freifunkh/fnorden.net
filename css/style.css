@@ -3,3 +3,20 @@ ul li.vorstand {
 }
 
 body .leaflet-container { font-size: 0.857143em; }
+
+ol li:not(:last-child) {
+    margin-bottom: 1em;
+}
+
+ol:not(li > ol) {
+  counter-reset: list;
+}
+
+ol:not(li > ol) > li {
+  list-style: none;
+}
+
+ol:not(li > ol) > li:before {
+  content: "(" counter(list) ") ";
+  counter-increment: list;
+}
