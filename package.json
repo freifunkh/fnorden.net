@@ -10,6 +10,7 @@
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
     "build:jquery.easing": "cp node_modules/jquery.easing/jquery.easing.min.js vendor/jquery.easing/",
     "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
+    "build:lora": "rm -rf vendor/@fontsource/lora/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/lora/ vendor/@fontsource/lora/; cat vendor/@fontsource/lora/400.css vendor/@fontsource/lora/700.css vendor/@fontsource/lora/400-italic.css vendor/@fontsource/lora/700-italic.css > vendor/@fontsource/lora/400_700_400italic_700italic.css",
     "build:montserrat": "rm -rf vendor/@fontsource/montserrat/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/montserrat/ vendor/@fontsource/montserrat/; cat vendor/@fontsource/montserrat/400.css vendor/@fontsource/montserrat/700.css > vendor/@fontsource/montserrat/400_700.css",
     "css:less": "lessc less/grayscale.less css/grayscale.css"
   },
@@ -31,5 +32,8 @@
     "jquery.easing": "^1.4.1",
     "leaflet": "^1.9.4",
     "less": "^4.2.1"
+  },
+  "dependencies": {
+    "@fontsource/lora": "^5.1.0"
   }
 }
