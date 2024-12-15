@@ -44,6 +44,9 @@ jobs:
     - name: Run build:leaflet
       run: npm run build:leaflet
 
+    - name: Run build:montserrat
+      run: npm run build:montserrat
+
     - name: Check git diff
       run: |
         git diff --exit-code
