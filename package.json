@@ -10,6 +10,7 @@
     "build:jquery": "cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
     "build:jquery.easing": "cp node_modules/jquery.easing/jquery.easing.min.js vendor/jquery.easing/",
     "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
+    "build:montserrat": "rm -rf vendor/@fontsource/montserrat/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/montserrat/ vendor/@fontsource/montserrat/; cat vendor/@fontsource/montserrat/400.css vendor/@fontsource/montserrat/700.css > vendor/@fontsource/montserrat/400_700.css",
     "css:less": "lessc less/grayscale.less css/grayscale.css"
   },
   "repository": {
@@ -23,6 +24,7 @@
   },
   "homepage": "https://github.com/freifunkh/fnorden.net#readme",
   "devDependencies": {
+    "@fontsource/montserrat": "^5.1.0",
     "@fortawesome/fontawesome-free": "^6.7.1",
     "bootstrap": "^4.6.2",
     "jquery": "^3.7.1",
