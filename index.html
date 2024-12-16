@@ -1,261 +1,438 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
 
-<head>
+        <title>FNorden e.V.</title>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <!-- FNorden CSS -->
+        <link href="css/style.css" rel="stylesheet" />
 
-    <title>FNorden e.V.</title>
+        <!-- Bootstrap Core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
-    <!-- FNorden CSS -->
-    <link href="css/style.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/grayscale.css" rel="stylesheet" />
 
-    <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom Fonts -->
+        <link
+            href="vendor/font-awesome/css/all.min.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="vendor/@fontsource/lora/400_700_400italic_700italic.css"
+            rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="vendor/@fontsource/montserrat/400_700.css"
+            rel="stylesheet"
+            type="text/css"
+        />
 
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+        <!-- leaflet -->
+        <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
 
-    <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="vendor/@fontsource/lora/400_700_400italic_700italic.css" rel="stylesheet" type="text/css">
-    <link href="vendor/@fontsource/montserrat/400_700.css" rel="stylesheet" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
 
-    <!-- leaflet -->
-    <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body id="page-top" data-spy="scroll" data-target=".fixed-top">
-
-
-    <!-- Intro Header -->
-    <header class="intro">
-        <div class="intro-body">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7 offset-md-5 offset-sm-0 col-md-12">
-                        <img src="img/logo_intro.png">
-                        <p class="intro-text">Förderverein freier Netzwerke im Norden.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+    <body id="page-top" data-spy="scroll" data-target=".fixed-top">
+        <!-- Intro Header -->
+        <header class="intro">
+            <div class="intro-body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-7 offset-md-5 offset-sm-0 col-md-12">
+                            <img src="img/logo_intro.png" />
+                            <p class="intro-text">
+                                Förderverein freier Netzwerke im Norden.
+                            </p>
+                            <a href="#about" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </header>
+        </header>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-expand-md" role="navigation">
-        <div class="container">
-            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target=".navbar-main-collapse">
-                <i class="fa fa-bars"></i>
-            </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
-                <img src="img/logo_mini.png">  <span class="light">F</span>Norden e.V.
-            </a>
+        <!-- Navigation -->
+        <nav class="navbar navbar-custom navbar-expand-md" role="navigation">
+            <div class="container">
+                <button
+                    type="button"
+                    class="navbar-toggler"
+                    data-toggle="collapse"
+                    data-target=".navbar-main-collapse"
+                >
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    <img src="img/logo_mini.png" />
+                    <span class="light">F</span>Norden e.V.
+                </a>
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-main-collapse">
-                <ul class="nav navbar-nav ml-auto">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden nav-item">
-                        <a href="#page-top" class="nav-link"></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link" href="#about">Über</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link" href="#contact">Kontakt</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link" href="#impressum">Impressum</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link" href="#donations">Spenden</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link"
-                        href="https://hannover.freifunk.net/wiki/Freifunk/Unterstuetzer">Unterstützer</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="page-scroll nav-link" href="satzung.html">Satzung</a>
-                    </li>
-                </ul>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-main-collapse">
+                    <ul class="nav navbar-nav ml-auto">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                        <li class="hidden nav-item">
+                            <a href="#page-top" class="nav-link"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="page-scroll nav-link" href="#about"
+                                >Über</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="page-scroll nav-link" href="#contact"
+                                >Kontakt</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="page-scroll nav-link" href="#impressum"
+                                >Impressum</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="page-scroll nav-link" href="#donations"
+                                >Spenden</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="page-scroll nav-link"
+                                href="https://hannover.freifunk.net/wiki/Freifunk/Unterstuetzer"
+                                >Unterstützer</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="page-scroll nav-link" href="satzung.html"
+                                >Satzung</a
+                            >
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+            <!-- /.container -->
+        </nav>
 
-
-    <!-- About Section -->
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-xl-8 offset-lg-2">
-                <h2>Über <span class="light">F</span>Norden e.V.</h2>
-                <p>Freier Zugang zu Kommunikation, Information und Bildung</p>
-                <p>ist wichtiger Bestandteil unserer demokratischen Gesellschaft.</p>
-                <p>Die Förderung freier Netzwerke, wie z.B. "Freifunk" ist Teil</p>
-                <p>der Arbeit dieses Vereins und zivilgesellschaftliches Engagement.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="container content-section text-center">
-        <div class="row">
-            <div class="col-xl-8 offset-lg-2">
-		<h2>Kontakt <span class="light">F</span>Norden e.V.</h2>
-                <ul class="list-inline vorstand">
-                    <li style="vertical-align: top;" class="list-inline-item">
-                        <p>
-			Carsten Wiemann<br>
-		        </p>
-		    </li>
-		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
-                    <li style="vertical-align: top;" class="list-inline-item">
-                        <p>
-                            Bernd Schittenhelm
-		        </p>
-		    </li>
-		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
-                    <li style="vertical-align: top;" class="list-inline-item">
-                        <p>
-                            Manuel Kock
-		        </p>
-		    </li>
-		    <li style="vertical-align: top;" class="list-inline-item"><p>|</p></li>
-                    <li style="vertical-align: top;" class="list-inline-item">
-                        <p>
-                            Jan-Niklas Burfeind
-		        </p>
-		    </li>
-                </ul>
-                <ul class="list-inline banner-social-buttons">
-                    <li class="list-inline-item">
-                        <a href="mailto:vorstand@fnorden.de" class="btn btn-secondary btn-lg"><i class="fa fa-envelope fa-fw"></i> <span class="network-name">Mail</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://friendica.me/profile/freifunkh" class="btn btn-secondary btn-lg"><i class="fa fa-globe fa-fw"></i> <span class="network-name">Friendica</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://github.com/freifunkh" class="btn btn-secondary btn-lg"><i class="fa-brands fa-github fa-fw"></i> <span class="network-name">Github</span></a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a href="https://www.facebook.com/pages/FNorden-eV/1605175656419883" class="btn btn-secondary btn-lg"><i class="fa-brands fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Map Section -->
-    <div id="map"></div>
-
-    <!-- About Section -->
-    <section id="impressum" class="container content-section text-center">
-        <div class="row">
-            <div class="col-xl-8 offset-lg-2">
-                <h1>Impressum</h1>
-                <h2>Angaben gemäß § 5 TMG:</h2>
-                <p>
-                    <span class="light">F</span>Norden e. V.<br />
-		    c/o Carsten Wiemann<br />
-                    Wülferoder Str. 70<br />
-                    30539 Hannover
-                </p>
-                <h2>Kontakt:</h2>
-                <p><a href="mailto:vorstand@fnorden.de">vorstand@fnorden.de</a></p>
-                <h2>Registereintrag:</h2>
-                <p>Eintragung im Vereinsregister. <br />Registergericht: Hannover <br />Registernummer: VR 202449</p>
-                <p>Quelle: <em><a rel="nofollow" href="http://www.e-recht24.de">http://www.e-recht24.de</a></em></p>
-            </div>
-        </div>
-    </section>
-    <!-- donation section -->
-    <section id="donations" class="container content-section text-center">
-        <div class="row">
-            <div class="col-xl-8 offset-lg-2">
-                <h1>Spenden</h1>
-                <p>... nehmen wir als gemeinnütziger Verein natürlich dankend entgegen und
-		arbeiten stetig daran, unser Netz mit Eurer Unterstützung noch besser zu machen.</p>
-                <p>Ab 50€ bieten wir dafür übrigens auch gerne eine Zuwendungsbescheinigung an.
-		Meldet euch dafür einfach nach der Spende kurz per Mail bei uns.</p>
-		<p>GLS Bank<br>
-
-                IBAN: DE07 4306 0967 4095 8416 00<br>
-                BIC: GENODEM1GLS</p>
-                <h2>oder via</h2>
-                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <!-- About Section -->
+        <section id="about" class="container content-section text-center">
+            <div class="row">
+                <div class="col-xl-8 offset-lg-2">
+                    <h2>Über <span class="light">F</span>Norden e.V.</h2>
                     <p>
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="hosted_button_id" value="BXV4AP2CNAKRU">
-                        <input type='hidden' name="item_name" value="Spende">
-                        <input type="image"
-                        src="img/logo_paypal.png"
-			width=300
-                        border="0" name="submit" alt="Jetzt einfach, schnell und sicher online
-                        bezahlen – mit PayPal.">
+                        Freier Zugang zu Kommunikation, Information und Bildung
                     </p>
-		    <p>bei kleineren Beträgen entgehen uns 5-10% der Spende durch Gebühren für Paypal</p>
-                </form>
+                    <p>
+                        ist wichtiger Bestandteil unserer demokratischen
+                        Gesellschaft.
+                    </p>
+                    <p>
+                        Die Förderung freier Netzwerke, wie z.B. "Freifunk" ist
+                        Teil
+                    </p>
+                    <p>
+                        der Arbeit dieses Vereins und zivilgesellschaftliches
+                        Engagement.
+                    </p>
+                </div>
             </div>
-        </div>
-    </section>
-    <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-xl-8 offset-lg-2">
-                <h1>Haftungsausschluss (Disclaimer)</h1>
-<h2>Haftung für Inhalte</h2>
-<p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.</p>
-<h2>Haftung für Links</h2>
-<p>Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
-<h2>Urheberrecht</h2>
-<p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.</p>
-<h2>Verwendetes Bild im Kopf der Seite</h2>
-<p>Modified header ímage &copy; <a href="https://web.archive.org/web/20210411203051/https://www.flickr.com/photos/barty/16433292312/in/album-72157650210944970/" target="_blank">Barry Badcock</a> licensed under <a href="https://creativecommons.org/licenses/by/2.0/" target="_blank">CC BY-SA 2.0</a></p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="container content-section text-center">
+            <div class="row">
+                <div class="col-xl-8 offset-lg-2">
+                    <h2>Kontakt <span class="light">F</span>Norden e.V.</h2>
+                    <ul class="list-inline vorstand">
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>Carsten Wiemann<br /></p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>|</p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>Bernd Schittenhelm</p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>|</p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>Manuel Kock</p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>|</p>
+                        </li>
+                        <li
+                            style="vertical-align: top"
+                            class="list-inline-item"
+                        >
+                            <p>Jan-Niklas Burfeind</p>
+                        </li>
+                    </ul>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item">
+                            <a
+                                href="mailto:vorstand@fnorden.de"
+                                class="btn btn-secondary btn-lg"
+                                ><i class="fa fa-envelope fa-fw"></i>
+                                <span class="network-name">Mail</span></a
+                            >
+                        </li>
+                        <li class="list-inline-item">
+                            <a
+                                href="https://friendica.me/profile/freifunkh"
+                                class="btn btn-secondary btn-lg"
+                                ><i class="fa fa-globe fa-fw"></i>
+                                <span class="network-name">Friendica</span></a
+                            >
+                        </li>
+                        <li class="list-inline-item">
+                            <a
+                                href="https://github.com/freifunkh"
+                                class="btn btn-secondary btn-lg"
+                                ><i class="fa-brands fa-github fa-fw"></i>
+                                <span class="network-name">Github</span></a
+                            >
+                        </li>
+                        <li class="list-inline-item">
+                            <a
+                                href="https://www.facebook.com/pages/FNorden-eV/1605175656419883"
+                                class="btn btn-secondary btn-lg"
+                                ><i class="fa-brands fa-facebook fa-fw"></i>
+                                <span class="network-name">Facebook</span></a
+                            >
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; <span class="light">F</span>Norden - 2024</p>
-        </div>
-    </footer>
+        <!-- Map Section -->
+        <div id="map"></div>
 
-    <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+        <!-- About Section -->
+        <section id="impressum" class="container content-section text-center">
+            <div class="row">
+                <div class="col-xl-8 offset-lg-2">
+                    <h1>Impressum</h1>
+                    <h2>Angaben gemäß § 5 TMG:</h2>
+                    <p>
+                        <span class="light">F</span>Norden e. V.<br />
+                        c/o Carsten Wiemann<br />
+                        Wülferoder Str. 70<br />
+                        30539 Hannover
+                    </p>
+                    <h2>Kontakt:</h2>
+                    <p>
+                        <a href="mailto:vorstand@fnorden.de"
+                            >vorstand@fnorden.de</a
+                        >
+                    </p>
+                    <h2>Registereintrag:</h2>
+                    <p>
+                        Eintragung im Vereinsregister. <br />Registergericht:
+                        Hannover <br />Registernummer: VR 202449
+                    </p>
+                    <p>
+                        Quelle:
+                        <em
+                            ><a rel="nofollow" href="http://www.e-recht24.de"
+                                >http://www.e-recht24.de</a
+                            ></em
+                        >
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- donation section -->
+        <section id="donations" class="container content-section text-center">
+            <div class="row">
+                <div class="col-xl-8 offset-lg-2">
+                    <h1>Spenden</h1>
+                    <p>
+                        ... nehmen wir als gemeinnütziger Verein natürlich
+                        dankend entgegen und arbeiten stetig daran, unser Netz
+                        mit Eurer Unterstützung noch besser zu machen.
+                    </p>
+                    <p>
+                        Ab 50€ bieten wir dafür übrigens auch gerne eine
+                        Zuwendungsbescheinigung an. Meldet euch dafür einfach
+                        nach der Spende kurz per Mail bei uns.
+                    </p>
+                    <p>
+                        GLS Bank<br />
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+                        IBAN: DE07 4306 0967 4095 8416 00<br />
+                        BIC: GENODEM1GLS
+                    </p>
+                    <h2>oder via</h2>
+                    <form
+                        action="https://www.paypal.com/cgi-bin/webscr"
+                        method="post"
+                        target="_top"
+                    >
+                        <p>
+                            <input type="hidden" name="cmd" value="_s-xclick" />
+                            <input
+                                type="hidden"
+                                name="hosted_button_id"
+                                value="BXV4AP2CNAKRU"
+                            />
+                            <input
+                                type="hidden"
+                                name="item_name"
+                                value="Spende"
+                            />
+                            <input
+                                type="image"
+                                src="img/logo_paypal.png"
+                                width="300"
+                                border="0"
+                                name="submit"
+                                alt="Jetzt einfach, schnell und sicher online
+                        bezahlen – mit PayPal."
+                            />
+                        </p>
+                        <p>
+                            bei kleineren Beträgen entgehen uns 5-10% der Spende
+                            durch Gebühren für Paypal
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section id="about" class="container content-section text-center">
+            <div class="row">
+                <div class="col-xl-8 offset-lg-2">
+                    <h1>Haftungsausschluss (Disclaimer)</h1>
+                    <h2>Haftung für Inhalte</h2>
+                    <p>
+                        Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für
+                        eigene Inhalte auf diesen Seiten nach den allgemeinen
+                        Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir
+                        als Diensteanbieter jedoch nicht verpflichtet,
+                        übermittelte oder gespeicherte fremde Informationen zu
+                        überwachen oder nach Umständen zu forschen, die auf eine
+                        rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur
+                        Entfernung oder Sperrung der Nutzung von Informationen
+                        nach den allgemeinen Gesetzen bleiben hiervon unberührt.
+                        Eine diesbezügliche Haftung ist jedoch erst ab dem
+                        Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
+                        möglich. Bei Bekanntwerden von entsprechenden
+                        Rechtsverletzungen werden wir diese Inhalte umgehend
+                        entfernen.
+                    </p>
+                    <h2>Haftung für Links</h2>
+                    <p>
+                        Unser Angebot enthält Links zu externen Webseiten
+                        Dritter, auf deren Inhalte wir keinen Einfluss haben.
+                        Deshalb können wir für diese fremden Inhalte auch keine
+                        Gewähr übernehmen. Für die Inhalte der verlinkten Seiten
+                        ist stets der jeweilige Anbieter oder Betreiber der
+                        Seiten verantwortlich. Die verlinkten Seiten wurden zum
+                        Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße
+                        überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der
+                        Verlinkung nicht erkennbar. Eine permanente inhaltliche
+                        Kontrolle der verlinkten Seiten ist jedoch ohne konkrete
+                        Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei
+                        Bekanntwerden von Rechtsverletzungen werden wir
+                        derartige Links umgehend entfernen.
+                    </p>
+                    <h2>Urheberrecht</h2>
+                    <p>
+                        Die durch die Seitenbetreiber erstellten Inhalte und
+                        Werke auf diesen Seiten unterliegen dem deutschen
+                        Urheberrecht. Die Vervielfältigung, Bearbeitung,
+                        Verbreitung und jede Art der Verwertung außerhalb der
+                        Grenzen des Urheberrechtes bedürfen der schriftlichen
+                        Zustimmung des jeweiligen Autors bzw. Erstellers.
+                        Downloads und Kopien dieser Seite sind nur für den
+                        privaten, nicht kommerziellen Gebrauch gestattet. Soweit
+                        die Inhalte auf dieser Seite nicht vom Betreiber
+                        erstellt wurden, werden die Urheberrechte Dritter
+                        beachtet. Insbesondere werden Inhalte Dritter als solche
+                        gekennzeichnet. Sollten Sie trotzdem auf eine
+                        Urheberrechtsverletzung aufmerksam werden, bitten wir um
+                        einen entsprechenden Hinweis. Bei Bekanntwerden von
+                        Rechtsverletzungen werden wir derartige Inhalte umgehend
+                        entfernen.
+                    </p>
+                    <h2>Verwendetes Bild im Kopf der Seite</h2>
+                    <p>
+                        Modified header ímage &copy;
+                        <a
+                            href="https://web.archive.org/web/20210411203051/https://www.flickr.com/photos/barty/16433292312/in/album-72157650210944970/"
+                            target="_blank"
+                            >Barry Badcock</a
+                        >
+                        licensed under
+                        <a
+                            href="https://creativecommons.org/licenses/by/2.0/"
+                            target="_blank"
+                            >CC BY-SA 2.0</a
+                        >
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Plugin JavaScript -->
-    <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
+        <!-- Footer -->
+        <footer>
+            <div class="container text-center">
+                <p>
+                    Copyright &copy; <span class="light">F</span>Norden - 2024
+                </p>
+            </div>
+        </footer>
 
-    <!-- Leaflet -->
-    <script src="vendor/leaflet/leaflet.js"></script>
+        <!-- jQuery -->
+        <script src="vendor/jquery/jquery.min.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/grayscale.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Custom Map JavaScript -->
-    <script src="js/map.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="vendor/jquery.easing/jquery.easing.min.js"></script>
 
-</body>
+        <!-- Leaflet -->
+        <script src="vendor/leaflet/leaflet.js"></script>
 
+        <!-- Custom Theme JavaScript -->
+        <script src="js/grayscale.js"></script>
+
+        <!-- Custom Map JavaScript -->
+        <script src="js/map.js"></script>
+    </body>
 </html>

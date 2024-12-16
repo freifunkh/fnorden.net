@@ -1,39 +1,40 @@
 {
-  "name": "fnorden.net",
-  "version": "1.0.0",
-  "description": "Der Vorschlag für fnorden.net, für den Fall, dass auch anderen 15 HTML Tags zu primitiv sind",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build:bootstrap": "rm -rf vendor/bootstrap; cp -r node_modules/bootstrap/dist/ vendor/bootstrap/",
-    "build:font-awesome": "rm -rf vendor/font-awesome; mkdir vendor/font-awesome; cp -r node_modules/@fortawesome/fontawesome-free/css/ vendor/font-awesome/css/; cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ vendor/font-awesome/webfonts/;",
-    "build:jquery": "cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
-    "build:jquery.easing": "cp node_modules/jquery.easing/jquery.easing.min.js vendor/jquery.easing/",
-    "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
-    "build:lora": "rm -rf vendor/@fontsource/lora/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/lora/ vendor/@fontsource/lora/; cat vendor/@fontsource/lora/400.css vendor/@fontsource/lora/700.css vendor/@fontsource/lora/400-italic.css vendor/@fontsource/lora/700-italic.css > vendor/@fontsource/lora/400_700_400italic_700italic.css",
-    "build:montserrat": "rm -rf vendor/@fontsource/montserrat/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/montserrat/ vendor/@fontsource/montserrat/; cat vendor/@fontsource/montserrat/400.css vendor/@fontsource/montserrat/700.css > vendor/@fontsource/montserrat/400_700.css",
-    "css:less": "lessc less/grayscale.less css/grayscale.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/freifunkh/fnorden.net.git"
-  },
-  "author": "FNorden",
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/freifunkh/fnorden.net/issues"
-  },
-  "homepage": "https://github.com/freifunkh/fnorden.net#readme",
-  "devDependencies": {
-    "@fontsource/montserrat": "^5.1.0",
-    "@fortawesome/fontawesome-free": "^6.7.1",
-    "bootstrap": "^4.6.2",
-    "jquery": "^3.7.1",
-    "jquery.easing": "^1.4.1",
-    "leaflet": "^1.9.4",
-    "less": "^4.2.1"
-  },
-  "dependencies": {
-    "@fontsource/lora": "^5.1.0"
-  }
+    "name": "fnorden.net",
+    "version": "1.0.0",
+    "description": "Der Vorschlag für fnorden.net, für den Fall, dass auch anderen 15 HTML Tags zu primitiv sind",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build:bootstrap": "rm -rf vendor/bootstrap; cp -r node_modules/bootstrap/dist/ vendor/bootstrap/",
+        "build:font-awesome": "rm -rf vendor/font-awesome; mkdir vendor/font-awesome; cp -r node_modules/@fortawesome/fontawesome-free/css/ vendor/font-awesome/css/; cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ vendor/font-awesome/webfonts/;",
+        "build:jquery": "cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
+        "build:jquery.easing": "cp node_modules/jquery.easing/jquery.easing.min.js vendor/jquery.easing/",
+        "build:leaflet": "rm -rf vendor/leaflet; cp -r node_modules/leaflet/dist/ vendor/leaflet/",
+        "build:lora": "rm -rf vendor/@fontsource/lora/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/lora/ vendor/@fontsource/lora/; cat vendor/@fontsource/lora/400.css vendor/@fontsource/lora/700.css vendor/@fontsource/lora/400-italic.css vendor/@fontsource/lora/700-italic.css > vendor/@fontsource/lora/400_700_400italic_700italic.css",
+        "build:montserrat": "rm -rf vendor/@fontsource/montserrat/; mkdir -p vendor/@fontsource/; cp -r node_modules/@fontsource/montserrat/ vendor/@fontsource/montserrat/; cat vendor/@fontsource/montserrat/400.css vendor/@fontsource/montserrat/700.css > vendor/@fontsource/montserrat/400_700.css",
+        "css:less": "lessc less/grayscale.less css/grayscale.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/freifunkh/fnorden.net.git"
+    },
+    "author": "FNorden",
+    "license": "Apache-2.0",
+    "bugs": {
+        "url": "https://github.com/freifunkh/fnorden.net/issues"
+    },
+    "homepage": "https://github.com/freifunkh/fnorden.net#readme",
+    "devDependencies": {
+        "@fontsource/montserrat": "^5.1.0",
+        "@fortawesome/fontawesome-free": "^6.7.1",
+        "bootstrap": "^4.6.2",
+        "jquery": "^3.7.1",
+        "jquery.easing": "^1.4.1",
+        "leaflet": "^1.9.4",
+        "less": "^4.2.1",
+        "prettier": "^3.4.2"
+    },
+    "dependencies": {
+        "@fontsource/lora": "^5.1.0"
+    }
 }

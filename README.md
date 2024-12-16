@@ -2,25 +2,19 @@
 
 This repository contains the statically delivered website of FNorden, our local Freifunk communities friends' association.
 
-
-
 ## Design decisions
 
-- This repo uses GitHub actions and `npm` to keep track of several javascript dependencies and remind us of their pending updates. 
+- This repo uses GitHub actions and `npm` to keep track of several javascript dependencies and remind us of their pending updates.
   `npm` is a development dependency, it is not used during delivery.
 - All javascript dependencies are vendored, which means their are delivered from our webserver instead of CDNs.
   The goal is to reduce tracking of our users.
 - GitHub is part of the development workflow, not part of the delivery process. The Website will not lie on GitHub pages.
-
-
 
 ## Deployment
 
 Upon pushes on master (which happen after each successful PR merge) the latest commit on master is pushed to the server at `fnorden.net`.
 
 It should not be necessary to pull the repo on the webserver manually anymore.
-
-
 
 ## Development
 
