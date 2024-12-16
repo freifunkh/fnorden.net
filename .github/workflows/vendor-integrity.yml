@@ -1,52 +1,52 @@
 name: Verify vendored integrity
 
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
 
 jobs:
-  build_and_verify:
-    runs-on: ubuntu-latest
+    build_and_verify:
+        runs-on: ubuntu-latest
 
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v3
 
-    - name: Set git config to ignore line endings
-      run: |
-        git config --global core.autocrlf input
-        git config --global core.safecrlf false
+            - name: Set git config to ignore line endings
+              run: |
+                  git config --global core.autocrlf input
+                  git config --global core.safecrlf false
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '23'
+            - name: Set up Node.js
+              uses: actions/setup-node@v3
+              with:
+                  node-version: "23"
 
-    - name: Install dependencies
-      run: npm install
+            - name: Install dependencies
+              run: npm install
 
-    - name: Run build:bootstrap
-      run: npm run build:bootstrap
+            - name: Run build:bootstrap
+              run: npm run build:bootstrap
 
-    - name: Run build:font-awesome
-      run: npm run build:font-awesome
+            - name: Run build:font-awesome
+              run: npm run build:font-awesome
 
-    - name: Run build:jquery
-      run: npm run build:jquery
+            - name: Run build:jquery
+              run: npm run build:jquery
 
-    - name: Run build:jquery.easing
-      run: npm run build:jquery.easing
+            - name: Run build:jquery.easing
+              run: npm run build:jquery.easing
 
-    - name: Run build:leaflet
-      run: npm run build:leaflet
+            - name: Run build:leaflet
+              run: npm run build:leaflet
 
-    - name: Run build:montserrat
-      run: npm run build:montserrat
+            - name: Run build:montserrat
+              run: npm run build:montserrat
 
-    - name: Check git diff
-      run: |
-        git diff --exit-code
+            - name: Check git diff
+              run: |
+                  git diff --exit-code
