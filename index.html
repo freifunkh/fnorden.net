@@ -39,7 +39,7 @@
         <link rel="stylesheet" href="vendor/leaflet/leaflet.css" />
     </head>
 
-    <body id="page-top" data-spy="scroll" data-target=".fixed-top">
+    <body id="page-top" data-bs-spy="scroll" data-bs-target=".fixed-top">
         <!-- Intro Header -->
         <header class="intro">
             <div class="intro-body">
@@ -65,8 +65,8 @@
                 <button
                     type="button"
                     class="navbar-toggler"
-                    data-toggle="collapse"
-                    data-target=".navbar-main-collapse"
+                    data-bs-toggle="collapse"
+                    data-bs-target=".navbar-main-collapse"
                 >
                     <i class="fa fa-bars"></i>
                 </button>
@@ -77,10 +77,13 @@
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-main-collapse">
-                    <ul class="nav navbar-nav ml-auto">
+                    <ul class="nav navbar-nav ms-auto">
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li class="hidden nav-item">
-                            <a href="#page-top" class="nav-link"></a>
+                            <a
+                                href="#page-top"
+                                class="page-scroll nav-link"
+                            ></a>
                         </li>
                         <li class="nav-item">
                             <a class="page-scroll nav-link" href="#about"
