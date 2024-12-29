@@ -32,6 +32,9 @@ jobs:
             - name: Run build:bootstrap
               run: npm run build:bootstrap
 
+            - name: Run build:dsicons
+              run: npm run build:dsicons
+
             - name: Run build:font-awesome
               run: npm run build:font-awesome
 

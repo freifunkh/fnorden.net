@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "DSoci";
+  src: url('DSoci.eot'); /* IE9*/
+  src: url('DSoci.eot?#iefix') format('embedded-opentype') /* IE6-IE8 */,
+  url('DSoci.woff2') format('woff2'),
+  url('DSoci.woff') format('woff'),
+  url('DSoci.ttf') format('truetype'),
+  url('DSoci.svg') format('svg');
+}
+
+[class^="DSoci-"], [class*=" DSoci-"] {
+  font-family: 'DSoci' !important;font-size: undefined;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.DSoci-activitypods:before { content: "\ea01"; }
+.DSoci-activitypub:before { content: "\ea02"; }
+.DSoci-akkoma:before { content: "\ea03"; }
+.DSoci-anfora:before { content: "\ea04"; }
+.DSoci-atproto:before { content: "\ea05"; }
+.DSoci-bluesky:before { content: "\ea06"; }
+.DSoci-bookwyrm:before { content: "\ea07"; }
+.DSoci-castopod:before { content: "\ea08"; }
+.DSoci-diaspora:before { content: "\ea09"; }
+.DSoci-dolphin:before { content: "\ea0a"; }
+.DSoci-drupal:before { content: "\ea0b"; }
+.DSoci-ecko:before { content: "\ea0c"; }
+.DSoci-element:before { content: "\ea0d"; }
+.DSoci-epicyon:before { content: "\ea0e"; }
+.DSoci-fedibird:before { content: "\ea0f"; }
+.DSoci-fediverse:before { content: "\ea10"; }
+.DSoci-feneas:before { content: "\ea11"; }
+.DSoci-firefish:before { content: "\ea12"; }
+.DSoci-flipboard:before { content: "\ea13"; }
+.DSoci-flockingbird:before { content: "\ea14"; }
+.DSoci-forgefed:before { content: "\ea15"; }
+.DSoci-forgeflux:before { content: "\ea16"; }
+.DSoci-forgefriends:before { content: "\ea17"; }
+.DSoci-forgejo:before { content: "\ea18"; }
+.DSoci-foundkey:before { content: "\ea19"; }
+.DSoci-friendica:before { content: "\ea1a"; }
+.DSoci-funkwhale:before { content: "\ea1b"; }
+.DSoci-gancio:before { content: "\ea1c"; }
+.DSoci-ghost:before { content: "\ea1d"; }
+.DSoci-gitea:before { content: "\ea1e"; }
+.DSoci-glitchsoc:before { content: "\ea1f"; }
+.DSoci-gnusocial:before { content: "\ea20"; }
+.DSoci-goldfish:before { content: "\ea21"; }
+.DSoci-gotosocial:before { content: "\ea22"; }
+.DSoci-greatape:before { content: "\ea23"; }
+.DSoci-guppe:before { content: "\ea24"; }
+.DSoci-hometown:before { content: "\ea25"; }
+.DSoci-hubzilla:before { content: "\ea26"; }
+.DSoci-immerspace:before { content: "\ea27"; }
+.DSoci-juick:before { content: "\ea28"; }
+.DSoci-kbin:before { content: "\ea29"; }
+.DSoci-ktistec:before { content: "\ea2a"; }
+.DSoci-lemmy:before { content: "\ea2b"; }
+.DSoci-librecast-live:before { content: "\ea2c"; }
+.DSoci-mastodon:before { content: "\ea2d"; }
+.DSoci-matrix:before { content: "\ea2e"; }
+.DSoci-microblog:before { content: "\ea2f"; }
+.DSoci-micropub:before { content: "\ea30"; }
+.DSoci-minipub:before { content: "\ea31"; }
+.DSoci-misskey:before { content: "\ea32"; }
+.DSoci-mitra:before { content: "\ea33"; }
+.DSoci-mobilizon:before { content: "\ea34"; }
+.DSoci-nextcloud:before { content: "\ea35"; }
+.DSoci-nostr:before { content: "\ea36"; }
+.DSoci-ocelot:before { content: "\ea37"; }
+.DSoci-olki:before { content: "\ea38"; }
+.DSoci-openengiadina:before { content: "\ea39"; }
+.DSoci-osada:before { content: "\ea3a"; }
+.DSoci-ostatus-alt:before { content: "\ea3b"; }
+.DSoci-ostatus:before { content: "\ea3c"; }
+.DSoci-owncast:before { content: "\ea3d"; }
+.DSoci-peertube:before { content: "\ea3e"; }
+.DSoci-pinetta:before { content: "\ea3f"; }
+.DSoci-pixelfed:before { content: "\ea40"; }
+.DSoci-pleroma:before { content: "\ea41"; }
+.DSoci-plume:before { content: "\ea42"; }
+.DSoci-prismo:before { content: "\ea43"; }
+.DSoci-pumpio:before { content: "\ea44"; }
+.DSoci-redaktor:before { content: "\ea45"; }
+.DSoci-redmatrix:before { content: "\ea46"; }
+.DSoci-reel2bits:before { content: "\ea47"; }
+.DSoci-skohub:before { content: "\ea48"; }
+.DSoci-smithereen:before { content: "\ea49"; }
+.DSoci-socialhome:before { content: "\ea4a"; }
+.DSoci-solid:before { content: "\ea4b"; }
+.DSoci-spritely:before { content: "\ea4c"; }
+.DSoci-statusnet:before { content: "\ea4d"; }
+.DSoci-streams:before { content: "\ea4e"; }
+.DSoci-swanye:before { content: "\ea4f"; }
+.DSoci-takahe:before { content: "\ea50"; }
+.DSoci-tent:before { content: "\ea51"; }
+.DSoci-threads:before { content: "\ea52"; }
+.DSoci-veilid:before { content: "\ea53"; }
+.DSoci-vocata:before { content: "\ea54"; }
+.DSoci-webfinger:before { content: "\ea55"; }
+.DSoci-webmention:before { content: "\ea56"; }
+.DSoci-wedistribute:before { content: "\ea57"; }
+.DSoci-wordpress:before { content: "\ea58"; }
+.DSoci-writefreely:before { content: "\ea59"; }
+.DSoci-xmpp:before { content: "\ea5a"; }
+.DSoci-xwiki:before { content: "\ea5b"; }
+.DSoci-zap:before { content: "\ea5c"; }
+
+
+$DSoci-activitypods: '\ea01';
+$DSoci-activitypub: '\ea02';
+$DSoci-akkoma: '\ea03';
+$DSoci-anfora: '\ea04';
+$DSoci-atproto: '\ea05';
+$DSoci-bluesky: '\ea06';
+$DSoci-bookwyrm: '\ea07';
+$DSoci-castopod: '\ea08';
+$DSoci-diaspora: '\ea09';
+$DSoci-dolphin: '\ea0a';
+$DSoci-drupal: '\ea0b';
+$DSoci-ecko: '\ea0c';
+$DSoci-element: '\ea0d';
+$DSoci-epicyon: '\ea0e';
+$DSoci-fedibird: '\ea0f';
+$DSoci-fediverse: '\ea10';
+$DSoci-feneas: '\ea11';
+$DSoci-firefish: '\ea12';
+$DSoci-flipboard: '\ea13';
+$DSoci-flockingbird: '\ea14';
+$DSoci-forgefed: '\ea15';
+$DSoci-forgeflux: '\ea16';
+$DSoci-forgefriends: '\ea17';
+$DSoci-forgejo: '\ea18';
+$DSoci-foundkey: '\ea19';
+$DSoci-friendica: '\ea1a';
+$DSoci-funkwhale: '\ea1b';
+$DSoci-gancio: '\ea1c';
+$DSoci-ghost: '\ea1d';
+$DSoci-gitea: '\ea1e';
+$DSoci-glitchsoc: '\ea1f';
+$DSoci-gnusocial: '\ea20';
+$DSoci-goldfish: '\ea21';
+$DSoci-gotosocial: '\ea22';
+$DSoci-greatape: '\ea23';
+$DSoci-guppe: '\ea24';
+$DSoci-hometown: '\ea25';
+$DSoci-hubzilla: '\ea26';
+$DSoci-immerspace: '\ea27';
+$DSoci-juick: '\ea28';
+$DSoci-kbin: '\ea29';
+$DSoci-ktistec: '\ea2a';
+$DSoci-lemmy: '\ea2b';
+$DSoci-librecast-live: '\ea2c';
+$DSoci-mastodon: '\ea2d';
+$DSoci-matrix: '\ea2e';
+$DSoci-microblog: '\ea2f';
+$DSoci-micropub: '\ea30';
+$DSoci-minipub: '\ea31';
+$DSoci-misskey: '\ea32';
+$DSoci-mitra: '\ea33';
+$DSoci-mobilizon: '\ea34';
+$DSoci-nextcloud: '\ea35';
+$DSoci-nostr: '\ea36';
+$DSoci-ocelot: '\ea37';
+$DSoci-olki: '\ea38';
+$DSoci-openengiadina: '\ea39';
+$DSoci-osada: '\ea3a';
+$DSoci-ostatus-alt: '\ea3b';
+$DSoci-ostatus: '\ea3c';
+$DSoci-owncast: '\ea3d';
+$DSoci-peertube: '\ea3e';
+$DSoci-pinetta: '\ea3f';
+$DSoci-pixelfed: '\ea40';
+$DSoci-pleroma: '\ea41';
+$DSoci-plume: '\ea42';
+$DSoci-prismo: '\ea43';
+$DSoci-pumpio: '\ea44';
+$DSoci-redaktor: '\ea45';
+$DSoci-redmatrix: '\ea46';
+$DSoci-reel2bits: '\ea47';
+$DSoci-skohub: '\ea48';
+$DSoci-smithereen: '\ea49';
+$DSoci-socialhome: '\ea4a';
+$DSoci-solid: '\ea4b';
+$DSoci-spritely: '\ea4c';
+$DSoci-statusnet: '\ea4d';
+$DSoci-streams: '\ea4e';
+$DSoci-swanye: '\ea4f';
+$DSoci-takahe: '\ea50';
+$DSoci-tent: '\ea51';
+$DSoci-threads: '\ea52';
+$DSoci-veilid: '\ea53';
+$DSoci-vocata: '\ea54';
+$DSoci-webfinger: '\ea55';
+$DSoci-webmention: '\ea56';
+$DSoci-wedistribute: '\ea57';
+$DSoci-wordpress: '\ea58';
+$DSoci-writefreely: '\ea59';
+$DSoci-xmpp: '\ea5a';
+$DSoci-xwiki: '\ea5b';
+$DSoci-zap: '\ea5c';

@@ -6,6 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "build:bootstrap": "rm -rf vendor/bootstrap; cp -r node_modules/bootstrap/dist/ vendor/bootstrap/",
+        "build:dsicons": "./node_modules/svgtofont/lib/cli.js --sources ./node_modules/decentralized-social-icons/src/ --output ./vendor/decentralized-social-icons/ --fontName DSoci",
         "build:font-awesome": "rm -rf vendor/font-awesome; mkdir vendor/font-awesome; cp -r node_modules/@fortawesome/fontawesome-free/css/ vendor/font-awesome/css/; cp -r node_modules/@fortawesome/fontawesome-free/webfonts/ vendor/font-awesome/webfonts/;",
         "build:jquery": "cp node_modules/jquery/dist/jquery.min.js vendor/jquery/jquery.min.js",
         "build:jquery.easing": "cp node_modules/jquery.easing/jquery.easing.min.js vendor/jquery.easing/",
@@ -28,13 +29,26 @@
         "@fontsource/montserrat": "^5.1.1",
         "@fortawesome/fontawesome-free": "^6.7.2",
         "bootstrap": "^5.3.3",
+        "decentralized-social-icons": "git+https://codeberg.org/WeDistribute/decentralized-social-icons.git",
         "jquery": "^3.7.1",
         "jquery.easing": "^1.4.1",
         "leaflet": "^1.9.4",
         "less": "^4.2.1",
-        "prettier": "^3.4.2"
+        "prettier": "^3.4.2",
+        "svgtofont": "^6.2.0"
     },
     "dependencies": {
         "@fontsource/lora": "^5.1.1"
+    },
+    "svgtofont": {
+        "css": {
+            "hasTimestamp": false
+        },
+        "emptyDist": true,
+        "outSVGPath": false,
+        "outSVGReact": false,
+        "svg2ttf": {
+            "ts": "0"
+        }
     }
 }
