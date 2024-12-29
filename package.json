@@ -35,6 +35,6 @@
         "prettier": "^3.4.2"
     },
     "dependencies": {
-        "@fontsource/lora": "^5.1.0"
+        "@fontsource/lora": "^5.1.1"
     }
 }
