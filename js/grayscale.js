@@ -28,6 +28,7 @@ $(function () {
                 1500,
                 "easeInOutExpo",
             );
+        window.location.href = $anchor.attr("href");
         event.preventDefault();
     });
 });
