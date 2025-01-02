@@ -1,4 +1,4 @@
-$(document).ready(function () {
+document.addEventListener("DOMContentLoaded", function () {
     var map = L.map("map").setView([52.39314088, 9.72286284], 16);
 
     map.scrollWheelZoom.disable();
