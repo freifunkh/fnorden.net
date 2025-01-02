@@ -1,0 +1,2 @@
+# PayPal returns 404 upon incomplete requests instead of a proper error code
+https://www.paypal.com/cgi-bin/webscr

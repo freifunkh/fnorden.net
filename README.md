@@ -1,5 +1,7 @@
 # fnorden.net
 
+[![Check Links](https://github.com/freifunkh/fnorden.net/actions/workflows/links.yml/badge.svg)](https://github.com/freifunkh/fnorden.net/actions/workflows/links.yml)
+
 This repository contains the statically delivered website of FNorden, our local Freifunk communities friends' association.
 
 ## Design decisions
