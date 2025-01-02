@@ -4,15 +4,19 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-// jQuery to collapse the navbar on scroll
-$(window).scroll(function () {
-    if ($(window).scrollTop() > $("header").outerHeight()) {
-        $(".navbar-custom").addClass("fixed-top");
-        $(".navbar-custom").css("background-color", "rgba(0,0,0,0.61)");
-    } else {
-        $(".navbar-custom").removeClass("fixed-top");
-        $(".navbar-custom").css("background-color", "rgba(0,0,0,1)");
-    }
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar-custom");
+
+    // event listener to collapse the navbar on scroll
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > document.querySelector("header").offsetHeight) {
+            navbar.classList.add("fixed-top");
+            navbar.style.backgroundColor = "rgba(0,0,0,0.61)";
+        } else {
+            navbar.classList.remove("fixed-top");
+            navbar.style.backgroundColor = "rgba(0,0,0,1)";
+        }
+    });
 });
 
 // jQuery for page scrolling feature - requires jQuery Easing plugin
