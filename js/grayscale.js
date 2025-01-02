@@ -5,6 +5,7 @@
  */
 
 document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("a.page-scroll");
     const navbar = document.querySelector(".navbar-custom");
 
     // event listener to collapse the navbar on scroll
@@ -17,23 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
             navbar.style.backgroundColor = "rgba(0,0,0,1)";
         }
     });
-});
 
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function () {
-    $("a.page-scroll").bind("click", function (event) {
-        var $anchor = $(this);
-        $("html, body")
-            .stop()
-            .animate(
-                {
-                    scrollTop: $($anchor.attr("href")).offset().top,
-                },
-                1500,
-                "easeInOutExpo",
-            );
-        window.location.href = $anchor.attr("href");
-        event.preventDefault();
+    links.forEach(function (link) {
+        link.addEventListener("click", function (event) {
+            const href = link.getAttribute("href");
+
+            if (!href.startsWith("#")) {
+                return;
+            }
+            event.preventDefault();
+            const targetId = href.substring(1); // Remove the "#" from href
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: "smooth",
+                });
+                window.location.href = href;
+            }
+        });
     });
 });
 
