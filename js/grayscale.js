@@ -6,6 +6,7 @@
 
 document.addEventListener("DOMContentLoaded", function () {
     const links = document.querySelectorAll("a.page-scroll");
+    const menuItems = document.querySelectorAll(".navbar-collapse ul li a");
     const navbar = document.querySelector(".navbar-custom");
 
     // event listener to collapse the navbar on scroll
@@ -39,9 +40,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
-});
 
-// Closes the Responsive Menu on Menu Item Click
-$(".navbar-collapse ul li a").click(function () {
-    $(".navbar-toggler:visible").click();
+    // Closes the Responsive Menu on Menu Item Click
+    menuItems.forEach((item) => {
+        item.addEventListener("click", function () {
+            document.querySelector(".navbar-toggler").click();
+        });
+    });
 });
