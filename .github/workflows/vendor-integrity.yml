@@ -38,9 +38,6 @@ jobs:
             - name: Run build:font-awesome
               run: npm run build:font-awesome
 
-            - name: Run build:jquery
-              run: npm run build:jquery
-
             - name: Run build:leaflet
               run: npm run build:leaflet
 
