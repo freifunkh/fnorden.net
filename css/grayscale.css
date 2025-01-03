@@ -139,6 +139,7 @@ a:focus {
   margin-top: -9px;
   margin-right: 10px;
 }
+.fa.fa-bars,
 .navbar-header .fa-bars {
   color: #fff;
 }
