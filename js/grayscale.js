@@ -36,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     top: targetElement.offsetTop,
                     behavior: "smooth",
                 });
+                if (link.classList.contains("nohref")) {
+                    return;
+                }
                 window.location.href = href;
             }
         });
