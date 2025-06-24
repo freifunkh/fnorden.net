@@ -31,7 +31,7 @@
         "decentralized-social-icons": "git+https://codeberg.org/WeDistribute/decentralized-social-icons.git",
         "leaflet": "^1.9.4",
         "less": "^4.3.0",
-        "prettier": "^3.5.3",
+        "prettier": "^3.6.0",
         "svgtofont": "^6.3.2"
     },
     "svgtofont": {
