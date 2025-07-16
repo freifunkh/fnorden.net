@@ -30,7 +30,7 @@
         "bootstrap": "^5.3.6",
         "decentralized-social-icons": "git+https://codeberg.org/WeDistribute/decentralized-social-icons.git",
         "leaflet": "^1.9.4",
-        "less": "^4.3.0",
+        "less": "^4.4.0",
         "prettier": "^3.6.2",
         "svgtofont": "^6.3.2"
     },
