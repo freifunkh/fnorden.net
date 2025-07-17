@@ -3,10 +3,10 @@ name: Verify repo is prettier consistent
 on:
     push:
         branches:
-            - master
+            - main
     pull_request:
         branches:
-            - master
+            - main
 
 jobs:
     build_and_verify:
