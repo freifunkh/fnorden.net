@@ -45,3 +45,10 @@ Sadly this is only the first half of the work. The other half is manual:
 5. `git add vendor/`and `git commit --amend`the changes to Dependabots intended changes.
 6. `git push --force-with-lease` the branch
 7. wait for the GitHub actions to run through sucessfully and perform a regular Review like described above
+
+### Nix shell
+
+This repo provides a file `shell.nix`, which contains everything relevant to run the above steps under NixOS.
+A shell can be opened like this:
+
+`nix-shell`
