@@ -14,7 +14,7 @@ This repository contains the statically delivered website of FNorden, our local 
 
 ## Deployment
 
-Upon pushes on master (which happen after each successful PR merge) the latest commit on master is pushed to the server at `fnorden.net`.
+Upon pushes on main (which happen after each successful PR merge) the latest commit on main is pushed to the server at `fnorden.net`.
 
 It should not be necessary to pull the repo on the webserver manually anymore.
 
