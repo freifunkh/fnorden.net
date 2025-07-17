@@ -40,7 +40,8 @@ Sadly this is only the first half of the work. The other half is manual:
 
 1. clone the repo
 2. checkout the PRs branch
-3. invoke the respective build-step, e.g. `npm run-script build:bootstrap`, where bootstrap should be swapped for the component to update.
-4. `git add vendor/`and `git commit --amend`the changes to Dependabots intended changes.
-5. `git push --force-with-lease` the branch
-6. wait for the GitHub actions to run through sucessfully and perform a regular Review like described above
+3. install the configured dependencies `npm i`
+4. invoke the respective build-step, e.g. `npm run-script build:bootstrap`, where bootstrap should be swapped for the component to update.
+5. `git add vendor/`and `git commit --amend`the changes to Dependabots intended changes.
+6. `git push --force-with-lease` the branch
+7. wait for the GitHub actions to run through sucessfully and perform a regular Review like described above
