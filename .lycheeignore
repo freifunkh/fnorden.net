@@ -1,2 +1,5 @@
 # PayPal returns 404 upon incomplete requests instead of a proper error code
 https://www.paypal.com/cgi-bin/webscr
+# npmjs introduced cloudflare blocks for bots, so we don't verify these links anymore
+https://www.npmjs.com/package/@fontsource/lora
+https://www.npmjs.com/package/@fontsource/montserrat
