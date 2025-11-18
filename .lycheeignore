@@ -3,3 +3,8 @@ https://www.paypal.com/cgi-bin/webscr
 # npmjs introduced cloudflare blocks for bots, so we don't verify these links anymore
 https://www.npmjs.com/package/@fontsource/lora
 https://www.npmjs.com/package/@fontsource/montserrat
+# fontsource didn't pay their bills at badgen
+https://badgen.net/npm/dm/@fontsource/lora
+https://badgen.net/npm/dt/@fontsource/lora
+https://badgen.net/npm/dm/@fontsource/montserrat
+https://badgen.net/npm/dt/@fontsource/montserrat
