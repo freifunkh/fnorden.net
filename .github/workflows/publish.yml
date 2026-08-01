@@ -19,5 +19,4 @@ jobs:
                   port: ${{ secrets.SSH_PORT }}
                   script: |
                       set -e
-                      cd /var/www/domains/fnorden.net/
-                      sudo -u www-data /usr/bin/git pull
+                      nixos-rebuild --switch
