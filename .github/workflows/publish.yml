@@ -19,4 +19,4 @@ jobs:
                   port: ${{ secrets.SSH_PORT }}
                   script: |
                       set -e
-                      nixos-rebuild --switch
+                      nixos-rebuild switch
