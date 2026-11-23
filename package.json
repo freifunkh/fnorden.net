@@ -32,7 +32,7 @@
         "leaflet": "^1.9.4",
         "less": "^4.9.1",
         "prettier": "^3.9.10",
-        "svgtofont": "^6.5.3"
+        "svgtofont": "^6.6.0"
     },
     "svgtofont": {
         "css": {
